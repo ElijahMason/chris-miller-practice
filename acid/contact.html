@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Call the stop, Chris Miller</title>
+  <meta name="description" content="Write your name, company, need, and timing. The page copies a brief for Chris Miller.">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#board">Skip to the board</a>
+  <header class="blind">
+    <div class="blind-top">
+      <p class="operator">Chris Miller</p>
+      <button class="menu-button" type="button" data-menu aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <p class="coach">Night coach</p>
+    </div>
+    <nav id="site-nav" class="board-nav" data-nav aria-label="Pages">
+      <a href="index.html">Board</a>
+      <a href="departures.html">Departures</a>
+      <a href="cabin.html">Cabin</a>
+      <a href="yard.html">Yard</a>
+      <a href="contact.html" aria-current="page">Call</a>
+    </nav>
+  </header>
+  <main id="board" tabindex="-1">
+    <p class="service">Call</p>
+    <h1>Write the brief</h1>
+    <p class="lead">Your name, your company, the need, and the timing. Submit, and this page copies a formatted brief. It is not sent on its own.</p>
+    <noscript>
+      <p>Script is off, so this page cannot copy the brief.</p>
+    </noscript>
+    <form class="brief-form" data-brief method="post" action="contact.html">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" autocomplete="organization" required>
+      </div>
+      <div class="field">
+        <label for="need">Need</label>
+        <textarea id="need" name="need" required></textarea>
+      </div>
+      <div class="field">
+        <label for="timing">Timing</label>
+        <input id="timing" name="timing" type="text" required aria-describedby="timing-hint">
+      </div>
+      <p class="hint" id="timing-hint">Say when the room can meet.</p>
+      <button class="submit" type="submit">Copy the brief</button>
+    </form>
+    <div class="brief-out" data-brief-out hidden>
+      <h2>The brief</h2>
+      <p data-brief-status role="status"></p>
+      <pre data-brief-text></pre>
+      <p><a data-mailto hidden>Open this brief in mail</a></p>
+    </div>
+  </main>
+  <footer class="colophon">
+    <p>Sit in the room. Leave with the spec.</p>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>

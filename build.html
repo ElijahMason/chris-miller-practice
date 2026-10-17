@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The build, Chris Miller</title>
+  <meta name="description" content="Implementation follows the spec. Handoff leaves you the system and the page.">
+  <meta name="theme-color" content="#f7f3ea">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#ticket-body">Skip to ticket</a>
+  <div class="ticket">
+    <header class="stub">
+      <p class="carrier">Chris Miller</p>
+      <button class="menu-button" type="button" data-menu aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <p class="ticket-class">Field ticket</p>
+      <div class="route-mark" aria-hidden="true"></div>
+      <nav id="site-nav" class="site-nav" data-nav aria-label="Pages">
+        <a href="index.html">Ticket</a>
+        <a href="route.html">Route</a>
+        <a href="room.html">Room</a>
+        <a href="build.html" aria-current="page">Build</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="stub-foot">Sit in the room. Leave with the spec.</p>
+    </header>
+    <div class="perf" aria-hidden="true"></div>
+    <main id="ticket-body" class="ticket-body" tabindex="-1">
+      <div class="frame">
+        <p class="kicker">Build</p>
+        <h1>The system follows the page</h1>
+        <div class="prose">
+          <p>Implementation follows the spec. Chris Miller builds the software the page describes. The spec is the reference, not a souvenir from the meeting.</p>
+          <p>If the room changes its mind, change the spec in writing. Then the system moves. A refusal that lives only in memory will wander back into the build.</p>
+        </div>
+        <ol class="timetable">
+          <li>
+            <p class="num">04</p>
+            <div>
+              <h2>Build</h2>
+              <p>The work in the editor starts from the written page. He does not invent a second set of decisions while the code is open.</p>
+            </div>
+          </li>
+          <li>
+            <p class="num">05</p>
+            <div>
+              <h2>Handoff</h2>
+              <p>Handoff is a working session. He sits with you, runs the system against the written decisions, and leaves both in your hands.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="end">Chris Miller. Field ticket ENG-ROOM.</p>
+      </div>
+    </main>
+  </div>
+  <script src="site.js"></script>
+</body>
+</html>

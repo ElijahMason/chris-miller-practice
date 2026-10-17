@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Departures, Chris Miller</title>
+  <meta name="description" content="The route of an engagement: arrive, listen, spec, build, handoff.">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="site.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#board">Skip to the board</a>
+  <header class="blind">
+    <div class="blind-top">
+      <p class="operator">Chris Miller</p>
+      <button class="menu-button" type="button" data-menu aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <p class="coach">Night coach</p>
+    </div>
+    <nav id="site-nav" class="board-nav" data-nav aria-label="Pages">
+      <a href="index.html">Board</a>
+      <a href="departures.html" aria-current="page">Departures</a>
+      <a href="cabin.html">Cabin</a>
+      <a href="yard.html">Yard</a>
+      <a href="contact.html">Call</a>
+    </nav>
+  </header>
+  <main id="board" tabindex="-1">
+    <p class="service">Departures</p>
+    <h1>The stops stay in order</h1>
+    <p class="lead">An engagement runs from the room to the handoff. The spec is written before the build. A refusal is written in the same plain language as a decision.</p>
+    <div class="legs">
+      <article class="leg" id="arrive">
+        <h2 class="bar"><span class="num">01</span> Arrive</h2>
+        <p>Chris Miller comes to the room where the work happens. A long trip is acceptable when the problem is there and will not come to him.</p>
+      </article>
+      <article class="leg" id="listen">
+        <h2 class="bar"><span class="num">02</span> Listen</h2>
+        <p>He sits with the people who hold the constraint. The meeting is part of the engineering. He writes while they talk, so the sentences stay theirs.</p>
+      </article>
+      <article class="leg" id="spec">
+        <h2 class="bar"><span class="num">03</span> Spec</h2>
+        <p>The spec is plain language. It records what was decided and what was refused. An open point stays open, with the name of the person who can close it.</p>
+      </article>
+      <article class="leg" id="build">
+        <h2 class="bar"><span class="num">04</span> Build</h2>
+        <p>He implements from that page. When a decision changes, the page changes before the system does. The build does not run ahead of the writing.</p>
+      </article>
+      <article class="leg" id="handoff">
+        <h2 class="bar"><span class="num">05</span> Handoff</h2>
+        <p>He walks the system with you against the spec. You keep the system and the page. The next person can see what the room refused.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="colophon">
+    <p>Sit in the room. Leave with the spec.</p>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>

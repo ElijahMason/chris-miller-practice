@@ -1,0 +1,582 @@
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url("fonts/fraunces.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("fonts/schibsted-grotesk.woff2") format("woff2");
+}
+
+:root {
+  --ink: #14233a;
+  --paper: #f7f3ea;
+  --signal: #c83c2f;
+  --coupon: #efeadd;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Schibsted Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--paper);
+}
+
+.skip {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 4;
+  transform: translateY(-150%);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.65rem 1rem;
+  min-height: 44px;
+}
+
+.skip:focus {
+  transform: translateY(0);
+}
+
+.ticket {
+  display: grid;
+  grid-template-columns: minmax(12.5rem, 16rem) 1.35rem minmax(0, 1fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.stub {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1.6rem 1.15rem 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.carrier {
+  margin: 0;
+  max-width: 6.2ch;
+  font-family: Fraunces, "Iowan Old Style", Palatino, Georgia, serif;
+  font-weight: 560;
+  font-size: 2.35rem;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-variation-settings: "opsz" 72, "SOFT" 20, "WONK" 1;
+}
+
+.ticket-class {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Punches sit on the tear so the stub reads as a ticket, not a sidebar. */
+.route-mark {
+  width: 2.75rem;
+  height: 0.4rem;
+  margin: 1rem 0 1.15rem;
+  background: var(--signal);
+}
+
+.menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--paper);
+  background: transparent;
+  color: var(--paper);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--paper);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--signal);
+}
+
+.stub-foot {
+  margin: auto 0 0;
+  padding-top: 2rem;
+  max-width: 18ch;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.perf {
+  background-color: var(--paper);
+  background-image: radial-gradient(circle at center, var(--ink) 6px, transparent 6.5px);
+  background-size: 1.35rem 22px;
+  background-repeat: repeat-y;
+  background-position: center top;
+}
+
+.ticket-body {
+  min-width: 0;
+  padding: clamp(1.5rem, 4vw, 4.25rem);
+}
+
+.frame {
+  max-width: 72rem;
+}
+
+.kicker {
+  margin: 0 0 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+.num,
+.lines dt {
+  font-family: Fraunces, "Iowan Old Style", Palatino, Georgia, serif;
+  font-weight: 560;
+  font-variation-settings: "opsz" 96, "SOFT" 30, "WONK" 1;
+}
+
+h1 {
+  margin: 0;
+  max-width: 12ch;
+  font-size: clamp(2.8rem, 6.5vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+h2 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.deck,
+.prose p,
+.lines dd,
+.field,
+.end,
+.brief-out p {
+  max-width: 65ch;
+}
+
+.deck {
+  margin: 1.25rem 0 0;
+  max-width: 36ch;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(15rem, 0.9fr);
+  gap: 2rem 3rem;
+  align-items: end;
+}
+
+.opening h1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.opening .deck {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.opening .stops {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.stops,
+.timetable,
+.lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stops {
+  border-top: 1px solid var(--ink);
+}
+
+.stops a {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 0.15rem 0.75rem;
+  align-items: baseline;
+  min-height: 44px;
+  padding: 0.8rem 0 0.7rem;
+  border-bottom: 1px solid var(--ink);
+  color: inherit;
+  text-decoration: none;
+}
+
+.stops .where {
+  grid-column: 2;
+  font-size: 1rem;
+}
+
+.num {
+  margin: 0;
+  color: var(--signal);
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variation-settings: normal;
+}
+
+.stops .name,
+.timetable h2 {
+  font-family: Fraunces, Georgia, serif;
+}
+
+.stops .name {
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.note {
+  margin: 1.5rem 0 0;
+  max-width: 36ch;
+}
+
+.prose {
+  margin-top: 1.5rem;
+}
+
+.prose p {
+  margin: 0 0 1rem;
+}
+
+.timetable {
+  margin-top: 2.25rem;
+}
+
+.timetable li {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 65ch);
+  gap: 0.4rem 1.25rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--ink);
+  scroll-margin-top: 1rem;
+}
+
+.hint {
+  margin: 0.85rem 0 0;
+  max-width: 65ch;
+}
+
+.with-quote {
+  display: grid;
+  grid-template-columns: minmax(0, 62ch) minmax(12rem, 18rem);
+  gap: 1.5rem 3rem;
+  align-items: start;
+  margin-top: 1.75rem;
+}
+
+blockquote {
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+blockquote p {
+  margin: 0;
+  max-width: 14ch;
+  font-family: Fraunces, Georgia, serif;
+  font-size: clamp(1.85rem, 3vw, 2.7rem);
+  font-weight: 560;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-variation-settings: "opsz" 80, "SOFT" 40, "WONK" 1;
+}
+
+.lines {
+  margin-top: 2rem;
+}
+
+.lines div {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 48ch);
+  gap: 0.75rem 1.25rem;
+  align-items: baseline;
+  padding: 0.95rem 0;
+  border-top: 1px solid var(--ink);
+}
+
+.lines dt {
+  margin: 0;
+  font-size: 1.65rem;
+}
+
+.lines dd {
+  margin: 0;
+}
+
+.brief-form {
+  margin-top: 1.75rem;
+  max-width: 46rem;
+  border-top: 1px solid var(--ink);
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 0.65rem 1rem;
+  align-items: end;
+  padding: 0.85rem 0 0.35rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field-block {
+  align-items: start;
+}
+
+.field-block label {
+  padding-top: 0.7rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 0.55rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+textarea {
+  min-height: 8.5rem;
+  resize: vertical;
+}
+
+.submit {
+  margin-top: 1.25rem;
+  min-height: 44px;
+  padding: 0.7rem 1.15rem;
+  border: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: var(--signal);
+  color: var(--paper);
+}
+
+.brief-out {
+  margin-top: 2rem;
+  max-width: 65ch;
+}
+
+.brief-out h2 {
+  font-size: 2rem;
+}
+
+.brief-out pre {
+  margin: 0.5rem 0 0;
+  padding: 1rem 1.1rem;
+  max-width: 100%;
+  background: var(--coupon);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.brief-out a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+}
+
+.end {
+  margin: 3rem 0 0;
+  font-size: 1rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .opening,
+  .with-quote {
+    grid-template-columns: 1fr;
+  }
+
+  .opening h1,
+  .opening .deck,
+  .opening .stops {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  blockquote {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .ticket {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1.25rem auto;
+  }
+
+  .stub {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 0.75rem;
+    align-items: center;
+    padding: 1rem 1rem 0.85rem;
+  }
+
+  .carrier {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: none;
+    font-size: 2rem;
+  }
+
+  .js .menu-button {
+    display: inline-flex;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .ticket-class,
+  .route-mark,
+  .site-nav,
+  .stub-foot {
+    grid-column: 1 / -1;
+  }
+
+  .ticket-class {
+    margin-top: 0.35rem;
+  }
+
+  .route-mark {
+    margin: 0.7rem 0 0.35rem;
+  }
+
+  .stub-foot {
+    margin: 0.35rem 0 0.2rem;
+    padding-top: 0;
+    max-width: 36ch;
+  }
+
+  .js .site-nav {
+    display: none;
+  }
+
+  .js .site-nav.is-open {
+    display: flex;
+    padding-bottom: 0.4rem;
+  }
+
+  .perf {
+    height: 1.25rem;
+    background-repeat: repeat-x;
+    background-size: 22px 1.25rem;
+  }
+
+  .ticket-body {
+    padding: 1.35rem 1.1rem 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .timetable li,
+  .lines div,
+  .field {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .field label {
+    padding-top: 0;
+  }
+
+  .field-block label {
+    padding-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
