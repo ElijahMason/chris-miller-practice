@@ -3,80 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chris Miller, field ticket</title>
+  <title>Chris Miller, a letter</title>
   <meta name="description" content="Chris Miller, software engineering contractor. Sit in the room. Leave with the spec.">
-  <meta name="theme-color" content="#f7f3ea">
+  <meta name="theme-color" content="#f6f1e6">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="site.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <a class="skip" href="#ticket-body">Skip to ticket</a>
-  <div class="ticket">
-    <header class="stub">
-      <p class="carrier">Chris Miller</p>
+  <a class="skip" href="#letter">Skip to the letter</a>
+  <div class="sheet">
+    <header class="letterhead">
+      <p class="name">Chris Miller</p>
       <button class="menu-button" type="button" data-menu aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <p class="ticket-class">Field ticket</p>
-      <div class="route-mark" aria-hidden="true"></div>
-      <nav id="site-nav" class="site-nav" data-nav aria-label="Pages">
-        <a href="index.html" aria-current="page">Ticket</a>
-        <a href="route.html">Route</a>
-        <a href="room.html">Room</a>
-        <a href="build.html">Build</a>
-        <a href="contact.html">Contact</a>
+      <p class="trade">Software engineering</p>
+      <nav id="site-nav" class="letter-nav" data-nav aria-label="Pages">
+        <a href="index.html" aria-current="page">Opening</a>
+        <a href="practice.html">Practice</a>
+        <a href="record.html">Record</a>
+        <a href="session.html">Session</a>
+        <a href="contact.html">Reply</a>
       </nav>
-      <p class="stub-foot">Sit in the room. Leave with the spec.</p>
     </header>
-    <div class="perf" aria-hidden="true"></div>
-    <main id="ticket-body" class="ticket-body" tabindex="-1">
-      <div class="frame">
-        <p class="kicker">Route ENG-ROOM</p>
-        <div class="opening">
-          <h1>Sit in the room. Leave with the spec.</h1>
-          <p class="deck">Chris Miller contracts as a software engineer. The sales background is practical: he can sit with a customer, write the requirement, and build it.</p>
-          <ol class="stops">
-            <li>
-              <a href="route.html#arrive">
-                <span class="num">01</span>
-                <span class="name">Arrive</span>
-                <span class="where">The room</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#listen">
-                <span class="num">02</span>
-                <span class="name">Listen</span>
-                <span class="where">The meeting</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#spec">
-                <span class="num">03</span>
-                <span class="name">Spec</span>
-                <span class="where">Plain language</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#build">
-                <span class="num">04</span>
-                <span class="name">Build</span>
-                <span class="where">From the page</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#handoff">
-                <span class="num">05</span>
-                <span class="name">Handoff</span>
-                <span class="where">With you</span>
-              </a>
-            </li>
-          </ol>
-        </div>
-        <p class="note">A long trip is acceptable when the problem is in the room.</p>
-        <p class="end">Chris Miller. Field ticket ENG-ROOM.</p>
-      </div>
-    </main>
+    <hr class="rule">
+    <div class="spread">
+      <aside class="margin-note">
+        <p>For the person who has the problem in the room.</p>
+      </aside>
+      <article id="letter" class="letter" tabindex="-1">
+        <p class="dateline">Opening letter</p>
+        <h1>Sit in the room. Leave with the spec.</h1>
+        <p class="salutation">Dear reader,</p>
+        <p>I am Chris Miller. I contract as a software engineer. Sales taught me the useful part: sit with a customer, write the requirement, and build what it names.</p>
+        <p>The meeting is part of the engineering. I write what was decided and what was refused. If the problem is in the room, I will travel to it.</p>
+        <p>The next letter names the work I take.</p>
+        <p class="close">Yours,</p>
+        <p class="sign">Chris Miller</p>
+        <p class="colophon">Sit in the room. Leave with the spec.</p>
+      </article>
+    </div>
   </div>
   <script src="site.js"></script>
 </body>
