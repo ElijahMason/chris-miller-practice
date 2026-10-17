@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#f7f3ea"/>
-  <rect width="11" height="32" fill="#14233a"/>
-  <circle cx="11" cy="5" r="1.7" fill="#14233a"/>
-  <circle cx="11" cy="11" r="1.7" fill="#14233a"/>
-  <circle cx="11" cy="17" r="1.7" fill="#14233a"/>
-  <circle cx="11" cy="23" r="1.7" fill="#14233a"/>
-  <circle cx="11" cy="29" r="1.7" fill="#14233a"/>
-  <rect x="16" y="15" width="12" height="3" fill="#c83c2f"/>
+  <rect width="32" height="32" fill="#0c0c0c"/>
+  <polygon points="0,26 32,8 32,14 0,32" fill="#1c3d8c"/>
+  <rect y="15" width="32" height="4" fill="#ffb000"/>
 </svg>

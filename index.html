@@ -3,81 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chris Miller, field ticket</title>
+  <title>Chris Miller, night coach</title>
   <meta name="description" content="Chris Miller, software engineering contractor. Sit in the room. Leave with the spec.">
-  <meta name="theme-color" content="#f7f3ea">
+  <meta name="theme-color" content="#0c0c0c">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="site.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <a class="skip" href="#ticket-body">Skip to ticket</a>
-  <div class="ticket">
-    <header class="stub">
-      <p class="carrier">Chris Miller</p>
+  <a class="skip" href="#board">Skip to the board</a>
+  <header class="blind">
+    <div class="blind-top">
+      <p class="operator">Chris Miller</p>
       <button class="menu-button" type="button" data-menu aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <p class="ticket-class">Field ticket</p>
-      <div class="route-mark" aria-hidden="true"></div>
-      <nav id="site-nav" class="site-nav" data-nav aria-label="Pages">
-        <a href="index.html" aria-current="page">Ticket</a>
-        <a href="route.html">Route</a>
-        <a href="room.html">Room</a>
-        <a href="build.html">Build</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <p class="stub-foot">Sit in the room. Leave with the spec.</p>
-    </header>
-    <div class="perf" aria-hidden="true"></div>
-    <main id="ticket-body" class="ticket-body" tabindex="-1">
-      <div class="frame">
-        <p class="kicker">Route ENG-ROOM</p>
-        <div class="opening">
-          <h1>Sit in the room. Leave with the spec.</h1>
-          <p class="deck">Chris Miller contracts as a software engineer. The sales background is practical: he can sit with a customer, write the requirement, and build it.</p>
-          <ol class="stops">
-            <li>
-              <a href="route.html#arrive">
-                <span class="num">01</span>
-                <span class="name">Arrive</span>
-                <span class="where">The room</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#listen">
-                <span class="num">02</span>
-                <span class="name">Listen</span>
-                <span class="where">The meeting</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#spec">
-                <span class="num">03</span>
-                <span class="name">Spec</span>
-                <span class="where">Plain language</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#build">
-                <span class="num">04</span>
-                <span class="name">Build</span>
-                <span class="where">From the page</span>
-              </a>
-            </li>
-            <li>
-              <a href="route.html#handoff">
-                <span class="num">05</span>
-                <span class="name">Handoff</span>
-                <span class="where">With you</span>
-              </a>
-            </li>
-          </ol>
-        </div>
-        <p class="note">A long trip is acceptable when the problem is in the room.</p>
-        <p class="end">Chris Miller. Field ticket ENG-ROOM.</p>
-      </div>
-    </main>
-  </div>
+      <p class="coach">Night coach</p>
+    </div>
+    <nav id="site-nav" class="board-nav" data-nav aria-label="Pages">
+      <a href="index.html" aria-current="page">Board</a>
+      <a href="departures.html">Departures</a>
+      <a href="cabin.html">Cabin</a>
+      <a href="yard.html">Yard</a>
+      <a href="contact.html">Call</a>
+    </nav>
+  </header>
+  <main id="board" tabindex="-1">
+    <p class="service">Service CM</p>
+    <h1>
+      <span class="line">Sit in the room.</span>
+      <span class="line line-accent">Leave with the spec.</span>
+    </h1>
+    <p class="lead">Chris Miller contracts as a software engineer. A sales background means he will sit with a customer and leave with the requirement written. He builds from that page.</p>
+    <ol class="runs">
+      <li>
+        <a href="departures.html#arrive">
+          <span class="num">01</span>
+          <span class="name">Arrive</span>
+          <span class="where">The room</span>
+        </a>
+      </li>
+      <li>
+        <a href="departures.html#listen">
+          <span class="num">02</span>
+          <span class="name">Listen</span>
+          <span class="where">The meeting</span>
+        </a>
+      </li>
+      <li>
+        <a href="departures.html#spec">
+          <span class="num">03</span>
+          <span class="name">Spec</span>
+          <span class="where">Plain language</span>
+        </a>
+      </li>
+      <li>
+        <a href="departures.html#build">
+          <span class="num">04</span>
+          <span class="name">Build</span>
+          <span class="where">From the page</span>
+        </a>
+      </li>
+      <li>
+        <a href="departures.html#handoff">
+          <span class="num">05</span>
+          <span class="name">Handoff</span>
+          <span class="where">With you</span>
+        </a>
+      </li>
+    </ol>
+    <p class="aside-note">A long trip is acceptable when the problem is in the room.</p>
+  </main>
+  <footer class="colophon">
+    <p>Sit in the room. Leave with the spec.</p>
+  </footer>
   <script src="site.js"></script>
 </body>
 </html>
